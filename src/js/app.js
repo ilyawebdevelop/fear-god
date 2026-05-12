@@ -1,9 +1,13 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
-
+import { Fancybox } from "./modules/fancybox.esm.js";
 import './components.js';
 
 flsFunctions.isWebp();
+
+Fancybox.bind("[data-fancybox]", {
+	closeButton: false,
+});
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
@@ -81,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const headerFixed = () => {
 		let scrollTop = window.scrollY;
-		let heroCenter = 400;
+		let heroCenter = 100;
 
 		if (scrollTop >= heroCenter) {
 			header.classList.add('active')
@@ -119,15 +123,13 @@ headerSearchBtn.addEventListener('click', () => {
 	}
 });
 
-
-
 hasSubMenuArray.forEach(el => {
 	let link = el.querySelector('.menu-link');
 	let menu = el.querySelector('.sub-menu');
 	link.addEventListener('click', (e) => {
 		e.preventDefault();
 
-		if (!link.classList.contains('active')) {			
+		if (!link.classList.contains('active')) {
 			hasSubMenuArray.forEach(elems => {
 				let linkElem = elems.querySelector('.menu-link');
 				let menuElem = elems.querySelector('.sub-menu');
@@ -157,6 +159,68 @@ overlaySubmenu.addEventListener('click', () => {
 	});
 });
 
+let shopTypeThree = document.querySelector('.shopTypeThree');
+let shopTypeFour = document.querySelector('.shopTypeFour');
+let shopList = document.querySelector('.shopList');
 
 
+function enableShopRow() {
+	localStorage.setItem('keyTypeShopPage', 2);
+	shopTypeFour?.classList.add('active');
+	shopTypeThree?.classList.remove('active');
+	shopList?.classList.add('shopList--four');
+	shopList?.classList.remove('shopList--three');
+}
+function disableShopRow() {
+	localStorage.setItem('keyTypeShopPage', 1);
+	shopTypeThree?.classList.add('active');
+	shopTypeFour?.classList.remove('active');
+	shopList?.classList.remove('shopList--four');
+	shopList?.classList.add('shopList--three');
+}
 
+shopTypeThree?.addEventListener('click', () => {
+	disableShopRow();
+});
+shopTypeFour?.addEventListener('click', () => {
+	enableShopRow();
+});
+if (localStorage.keyTypeShopPage == 1) {
+	disableShopRow();
+} else if (localStorage.keyTypeShopPage == 2) {
+	enableShopRow();
+}
+
+
+jQuery('.bapf_head').click(function () {
+	jQuery(this).toggleClass('hidden');
+	jQuery(this).siblings('.bapf_body').slideToggle();
+	jQuery(this).siblings('.bapf_body').toggleClass('hidden');
+});
+
+// filter hide not first element 
+jQuery('#modalFilter .berocket_single_filter_widget_200 .bapf_head').addClass('hidden');
+jQuery('#modalFilter .berocket_single_filter_widget_200 .bapf_body').addClass('hidden');
+
+const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
+
+if (mediaQueryMax991.matches) {
+	// Инициализация слайдера introSlider
+	const productGalSlider = document.querySelector('.productGalSlider');
+	var mySwiperProductGal= new Swiper(productGalSlider, {
+		slidesPerView: 1,
+		speed: 1500,
+		spaceBetween: 10,
+		loop: true,
+		effect: 'fade',
+		// loop: true,
+		fadeEffect: {
+			crossFade: true
+		},
+		pagination: {
+			el: productGalSlider?.querySelector('.swiper-pagination'),
+			clickable: true,
+			type: 'bullets',
+		},
+	});
+}

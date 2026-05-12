@@ -54,10 +54,19 @@
     border: 1px solid var(--main-color);
     color: var(--main-color);
 
+    svg {
+      fill: transparent;
+      stroke-width: 2px;
+    }
+
     &:hover {
       background-color: var(--main-color);
       color: var(--white);
+      svg {
+        stroke: #fff;
+      }
     }
+
   }
 
   &--blur-light {
@@ -65,15 +74,21 @@
     background: rgba(0, 0, 0, 0.1);
     color: #fff;
   }
+
   &.min-w-255 {
     min-width: 255px;
   }
+
   &.min-w-270 {
     min-width: 270px;
   }
 
   &.min-w-295 {
     min-width: 295px;
+  }
+
+  &.h-37 {
+    height: 37px;
   }
 
   &.h-64 {
@@ -83,6 +98,18 @@
   &.fz-28 {
     font-size: 28px;
     line-height: normal;
+  }
+
+  &.fz-14 {
+    font-size: 14px;
+  }
+
+  &.px-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  &.w-100 {
+    width: 100%;
   }
 }
 
@@ -110,10 +137,35 @@
     }
   }
 }
+
 .searchBtn {
   &.position-absolute {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+  }
+}
+.shopTypeBtn {
+  width: 37px;
+  height: 37px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    svg {
+      fill: #000;
+    }
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: #8c8c8c;
+  }
+  &.active {
+    border-color: #000;
+    svg {
+      fill: #000;
+    }
   }
 }

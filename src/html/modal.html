@@ -1,9 +1,9 @@
 <!-- modal -->
 <!-- order -->
-<div class="modal" id="modalOrder">
+<div class="modal" id="modalFilter">
 
   <div class="modalHead">
-    <h2 class="h2">Оставьте заявку</h2>
+    <h2 class="h2 text-uppercase">Фильтры</h2>
     <button data-fancybox-close class="f-button is-close-btn" title="Close"><svg xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24" tabindex="-1">
         <path d="M20 20L4 4m16 0L4 20"></path>
@@ -12,24 +12,66 @@
   </div>
 
   <div class="modalContent">
-    <p class="modalDescr">
-      Оставьте заявку на бесплатную консультацию и наши специалисты ответят на все Ваши вопросы
-    </p>
-    <div class="modalForm">
-      <div class="inputW">
-        <input type="text" class="formInput" placeholder="Как вас зовут?">
-      </div>
-      <div class="inputW">
-        <input type="tel" class="formInput" placeholder="+7 (___) ___-__-__" inputmode="text">
-      </div>
-      <button class="button button--blue formBtn">
-        Отправить заявку
-      </button>
-      <div class="agreement">
-        <p>
-          Нажимая кнопку выше, вы даёте согласие на обработку своих персональных данных.
-        </p>
+
+    <div class="berocket_single_filter_widget berocket_single_filter_widget_199 " data-id="199" style="">
+      <div class="bapf_sfilter bapf_ckbox bapf_ckbox_sqchck" data-op="OR" data-taxonomy="pa_brand"
+        data-name="Бренд товара" id="bapf_2">
+        <div class="bapf_head">
+          <h3>Коллекция</h3>
+        </div>
+        <div class="bapf_body" style="display: block;">
+          <ul>
+            <li><input data-name="apple" id="bapf_2_42" type="checkbox" value="42"><label for="bapf_2_42">Fear of
+                God</label>
+            </li>
+            <li><input data-name="apple" id="bapf_2_43" type="checkbox" value="42"><label
+                for="bapf_2_43">Essentials</label></li>
+            <li><input data-name="Athletics" id="bapf_2_44" type="checkbox" value="42"><label
+                for="bapf_2_44">Athletics</label></li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div class="berocket_single_filter_widget berocket_single_filter_widget_200 " data-id="200" style="">
+      <div class="bapf_sfilter bapf_ckbox bapf_ckbox_sqchck" data-op="OR" data-taxonomy="pa_country"
+        data-name="Страна производителя" id="bapf_3">
+        <div class="bapf_head">
+          <h3>Тип товара</h3>
+        </div>
+        <div class="bapf_body">
+          <ul>
+            <li><input data-name="Турция" id="bapf_3_43" type="checkbox" value="43"><label for="bapf_3_43">15</label>
+            </li>
+            <li><input data-name="Турция" id="bapf_3_45" type="checkbox" value="45"><label for="bapf_3_45">19</label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="berocket_single_filter_widget berocket_single_filter_widget_198 " data-id="198" style="">
+      <div class="bapf_sfilter bapf_slidr bapf_slidr_jqrui divi_slider_class bapf_slidr_ready" data-op="slidr"
+        data-taxonomy="price" data-name="Цена" id="bapf_1">
+        <div class="bapf_head">
+          <h3>Цена</h3>
+        </div>
+        <div class="bapf_body" style="display: block;">
+          <div class="bapf_slidr_all"><span class="bapf_from"><input type="text"></span><span class="bapf_to"><input
+                type="text"></span>
+            <div
+              class="bapf_slidr_main bapf_slidr_num ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+              data-display="wc_price" data-min="0" data-start="0" data-max="2577447" data-end="2577447" data-step="1"
+              data-number_style="[&quot; &quot;,&quot;&quot;,&quot;&quot;]">
+              <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span
+                tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span
+                tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="fz-15 filter-reset d-block" href="#">Очистить</a>
+
   </div>
 </div>

@@ -2,23 +2,153 @@
 .modal {
   display: none;
   color: var(--main-color);
-  &-header {
-    padding: 45px;
-    padding-bottom: 25px;
-    border-bottom: none;
+  padding: 50px;
+
+  .h2 {
+    font-size: 18px;
+    line-height: normal;
   }
 
-  &-body {
-    padding: 45px;
-    padding-top: 0;
+  color: #000;
+
+  .is-close-btn {
+    position: unset;
+    background-color: transparent;
   }
 
-  &-title {
-    font-size: 23px;
-  }
-  .btn-close {
-    background: none;
-    opacity: 1;
+  &Head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
   }
 }
 
+#modalFilter {
+  width: 500px;
+  height: 100%;
+  margin-left: auto;
+}
+
+.filter-reset {
+  font-weight: 300;
+  border-bottom: 1px solid #000;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.bapf_head {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.bapf_head.hidden h3 {
+  background: url("@img/icons/plus.svg") no-repeat right top 4px/11px;
+}
+
+.bapf_head h3 {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-right: 22px;
+  background: url("@img/icons/minus.svg") no-repeat right top 4px/11px;
+  font-family: var(--font-family);
+  padding-bottom: 4px;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.bapf_body {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  ul {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+
+        &:checked {
+          &+label {
+            &::before {
+              background-color: #000;
+              border-color: #000;
+            }
+          }
+        }
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #707070;
+        cursor: pointer;
+
+        &::before {
+          display: block;
+          content: '';
+          width: 12px;
+          height: 12px;
+          border: 1px solid #c9c9c9;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}
+
+.bapf_body.hidden {
+  display: none;
+}
+
+.bapf_sfilter {
+  margin-bottom: 15px;
+}
+
+.bapf_slidr_all {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 30px;
+}
+
+.bapf_from,
+.bapf_to {
+  grid-column: 6 span;
+
+
+
+  input {
+    width: 100%;
+    border: 1px solid #E9E9E9;
+    height: 37px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &:focus {
+      border-color: #000;
+    }
+  }
+}
+
+.bapf_to {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content: '';
+    width: 11px;
+    height: 1px;
+    background-color: #000;
+  }
+}

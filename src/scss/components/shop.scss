@@ -22,9 +22,12 @@
 
 .productCard {
   &Img {
+    display: block;
+    width: 100%;
+
     img {
       width: 100%;
-      height: 605px;
+      height: 100%;
       object-fit: cover;
       transition: transform .2s linear;
 
@@ -107,8 +110,21 @@
   .productCard {
     grid-column: 3 span;
   }
+
+  &--three {
+    .productCard {
+      grid-column: 4 span;
+
+      &Img {
+        &W {
+          height: 780px;
+        }
+      }
+    }
+  }
 }
-.shop-action{
+
+.shop-action {
   display: flex;
   column-gap: 50px;
   align-items: center;
@@ -116,17 +132,24 @@
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 30px;
+  background: #fff;
+  z-index: 1;
+  position: sticky;
+  top: 84px;
 }
+
 .shopNav {
   ul {
     display: flex;
     column-gap: 5px;
+
     li {
       &.active {
         a {
           border-color: #000;
         }
       }
+
       a {
         font-size: 14px;
         line-height: normal;
@@ -139,6 +162,7 @@
         padding-right: 12px;
         border: 1px solid transparent;
         transition: border-color .2s linear;
+
         &:hover {
           border-color: #000;
         }

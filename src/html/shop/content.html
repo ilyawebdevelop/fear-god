@@ -12,6 +12,37 @@
           <li><a href="#">Обувь</a></li>
         </ul>
       </nav>
+
+      <div class="d-flex gap-20 align-items-center">
+
+        <button class="shopTypeBtn shopTypeThree active">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#type-three"></use>
+          </svg>
+        </button>
+
+        <button class="shopTypeBtn shopTypeFour" type="button">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#type-four"></use>
+          </svg>
+        </button>
+
+        <div class="formSelect">
+          <select class="select-sort" name="sortSelect" id="sortSelect">
+            <option value="1">По популярности</option>
+            <option value="2">По цене</option>
+            <option value="3">По умолчанию</option>
+          </select>
+        </div>
+
+        <button class="button button--black-transparent fz-14 h-37 px-12 gap-15" type="button" data-fancybox data-src="#modalFilter">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#filter"></use>
+          </svg>
+          <span class="text-uppercase">Фильтры (2)</span>
+        </button>
+      </div>
+
     </div>
 
     <div class="shopContent">
