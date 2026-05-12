@@ -1,0 +1,76 @@
+// Footer
+.footer {
+  &T {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &C {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &B {
+    border-top: 1px solid #e9e9e9;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    justify-content: space-between;
+  }
+
+  &Subscribe {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    justify-content: space-between;
+    margin-left: 680px;
+  }
+
+  &Nav {
+    width: 255px;
+
+    &W {
+      display: flex;
+      column-gap: 60px;
+    }
+
+    ul {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        a {
+          font-size: 15px;
+          font-weight: 300;
+          text-decoration-color: transparent !important;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          text-decoration-thickness: 1px;
+          transition: text-decoration .2s linear;
+
+          &:hover {
+            text-decoration-color: #000 !important;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    &:hover {
+      opacity: .85;
+    }
+    img {
+      width: 170px;
+    }
+  }
+  .formInput {
+    width: 300px;
+  }
+}

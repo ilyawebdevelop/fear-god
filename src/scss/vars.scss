@@ -1,0 +1,25 @@
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+ // Containers
+:root { 
+  --content-width: 1820px;
+  --content-fluid-width: 1700px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --font-family: 'Fira Sans', sans-serif;
+  --outline: #E9E9E9;
+  --white: #fff;
+  --main-color: #000;
+  --success: #27c340;
+  --error: #e02828;
+  --yellow: #ffc529; 
+  --gray: #757575; 
+}

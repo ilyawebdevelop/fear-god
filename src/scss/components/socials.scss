@@ -1,0 +1,17 @@
+.socials {
+  ul {
+    display: flex;
+    column-gap: 20px;
+    li {
+      a {
+        &:hover {
+          opacity: .8;
+        }
+        img {
+          height: 17px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

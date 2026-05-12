@@ -1,0 +1,54 @@
+<section class="sect pt-0 sliderW">
+  <div class="container">
+
+    <div class="sectHead">
+      <h2 class="h2 text-center">
+        Новая коллекция
+      </h2>
+    </div>
+
+    <div class="productSliderW">
+      <button class="navArrow navArrowPrev" type="button">
+        <img src="@img/icons/slider-prev.svg" alt="arrow">
+      </button>
+      <div class="swiper productSlider">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-1.html',{})
+          </div>
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-2.html',{})
+          </div>
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-3.html',{})
+          </div>
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-4.html',{})
+          </div>
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-1.html',{})
+          </div>
+
+          <div class="swiper-slide productSlide">
+            @@include('../shop/card-2.html',{})
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <button class="navArrow navArrowNext" type="button">
+        <img src="@img/icons/slider-next.svg" alt="arrow">
+      </button>
+    </div>
+
+    <a href="#" class="button button--black-transparent min-w-295 mt-45 mx-auto text-uppercase">
+      Перейти в каталог
+    </a>
+
+  </div>
+</section>

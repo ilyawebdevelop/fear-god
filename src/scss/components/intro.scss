@@ -1,0 +1,133 @@
+@keyframes fillLine {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.intro {
+  &Video {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+
+    &--lg {
+      @media(max-width: 991px) {
+        display: none;
+      }
+    }
+
+    &--sm {
+      display: none;
+
+      @media(max-width: 991px) {
+        display: block;
+      }
+    }
+  }
+
+  &Slider {
+
+    .swiper-pagination {
+      width: 470px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+
+      &-bullet {
+        opacity: 1;
+        background-color: rgba($color: #fff, $alpha: .2);
+        flex: 1;
+        border-radius: 0;
+        height: 4px;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        position: relative;
+        overflow: hidden;
+
+        &-active {
+          background-color: rgba($color: #fff, $alpha: .2);
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #fff;
+            /* Цвет заполнения */
+
+            /* Анимация: duration должна совпадать с delay в JS */
+            animation: fillLine linear forwards;
+            animation-duration: 5000ms;
+            /* Должно совпадать с delay */
+          }
+        }
+      }
+    }
+  }
+
+  &Slide {
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background-color: rgba($color: #000000, $alpha: .2);
+    }
+
+    &Img {
+      height: 90vh;
+      object-fit: cover;
+      width: 100%;
+
+      &--lg {
+        @media(max-width: 991px) {
+          display: none;
+        }
+      }
+
+      &--sm {
+        display: none;
+
+        @media(max-width: 991px) {
+          display: block;
+        }
+      }
+    }
+
+    &Content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+  }
+
+  &Title {
+    font-size: 52px;
+    line-height: normal;
+    color: #fff;
+  }
+
+  &Descr {
+    font-size: 15px;
+    font-weight: 300;
+    color: #fff;
+  }
+}

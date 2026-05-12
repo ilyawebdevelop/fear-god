@@ -1,0 +1,33 @@
+.aioseo-breadcrumbs {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 12px;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.aioseo-breadcrumbs a {
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  color: #000;
+}
+
+.aioseo-breadcrumbs a:hover {
+  color: #000;
+}
+.aioseo-breadcrumb-separator {
+  &::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+  }
+}
