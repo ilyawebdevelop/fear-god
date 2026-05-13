@@ -1,0 +1,238 @@
+<section class="sect pt-0">
+  <div class="container">
+    <div class="cartW">
+      <div class="cartContent">
+
+        <div class="checkoutBlock">
+
+          <div class="checkoutBlockTitle fz-28 mb-30">
+            Личная информация
+            <img src="@img/icons/arrow-down.svg" alt="icon">
+          </div>
+
+          <div class="checkoutGrid">
+
+            <div class="form-row">
+              <label for="name">Имя*</label>
+              <input type="text">
+            </div>
+            <div class="form-row">
+              <label for="female">Фамилия*</label>
+              <input type="text">
+            </div>
+            <div class="form-row">
+              <label for="tel">Телефон*</label>
+              <input type="tel" placeholder="+7 (___) ___-__-__">
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="text">
+            </div>
+            <div class="form-row">
+              <label for="name">Страна*</label>
+              <select name="country" id="country">
+                <option value="1">
+                  Россия
+                </option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="female">Город*</label>
+              <input type="text">
+            </div>
+            <div class="form-row form-row--wide">
+              <label for="female">Адрес для доставки курьером</label>
+              <input type="text">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="checkoutBlock">
+
+          <div class="checkoutBlockTitle fz-28 mb-30">
+            Способ доставки
+            <img src="@img/icons/arrow-down.svg" alt="icon">
+          </div>
+
+          <div class="checkoutGrid">
+
+            <div class="radioW">
+              <input id="del_1" type="radio" name="delivery" checked>
+              <label class="d-flex align-items-center gap-10" for="del_1">
+                <span>В пункте выдачи CDEK</span>
+                <span class="color-75">/ 700 ₽</span>
+              </label>
+            </div>
+
+            <div class="radioW">
+              <input id="del_2" type="radio" name="delivery">
+              <label class="d-flex align-items-center gap-10" for="del_2">
+                <span>Курьером CDEK </span>
+                <span class="color-75">/ 1 000 ₽</span>
+              </label>
+            </div>
+
+            <div class="radioW">
+              <input id="del_3" type="radio" name="delivery">
+              <label class="d-flex align-items-center gap-10" for="del_3">
+                <span>Почта России </span>
+                <span class="color-75">/ 1 500 ₽</span>
+              </label>
+            </div>
+
+            <div class="radioW">
+              <input id="del_4" type="radio" name="delivery">
+              <label class="d-flex align-items-center gap-10" for="del_4">
+                <span>Яндекс Доставка </span>
+                <span class="color-75">/ 1 500 ₽</span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="checkoutBlock">
+
+          <div class="checkoutBlockTitle active fz-28 mb-30">
+            Способ оплаты
+            <img src="@img/icons/arrow-down.svg" alt="icon">
+          </div>
+
+          <div class="checkoutGrid" style="display: none;">
+
+            <div class="radioW">
+              <input id="payment_1" type="radio" name="payment" checked>
+              <label class="d-flex align-items-center gap-10" for="payment_1">
+                <span>Наличными</span>
+              </label>
+            </div>
+
+            <div class="radioW">
+              <input id="payment_2" type="radio" name="payment">
+              <label class="d-flex align-items-center gap-10" for="payment_2">
+                <span>После получения товара</span>
+              </label>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="cartOrder">
+        <h3 class="h3 text-center mb-30 text-uppercase">
+          Информация о заказе
+        </h3>
+
+        <div class="cartOrderItems mb-30">
+
+          <div class="cartOrderItem">
+            <a href="#" class="cartOrderItemImg">
+              <img src="@img/admin/product/image-1.jpg" alt="image">
+            </a>
+            <div class="cartOrderItemContent">
+              <div class="cartOrderItemContentTop">
+                <a href="#" class="cartOrderItemTitle fz-18 ls-005 text-uppercase">
+                  Лонгслив Fear of God Essentials
+                </a>
+              </div>
+              <div class="cartOrderItemContentBottom">
+
+                <div class="cartOrderItemVariations">
+                  <div class="cartOrderItemVariation fz-15 fw-light">
+                    Черный / M
+                  </div>
+                </div>
+
+                <div class="cartOrderItemPriceW">
+                  <span class="fz-15 fw-light">1 шт.</span>
+                  <div class="cartItemPrice">
+                    <span class="fz-15">12 990 ₽</span>
+                    <span class="fz-13 fw-light color-75 line-trough">14 900 ₽</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="cartOrderItem">
+            <a href="#" class="cartOrderItemImg">
+              <img src="@img/admin/product/image-2.jpg" alt="image">
+            </a>
+            <div class="cartOrderItemContent">
+              <div class="cartOrderItemContentTop">
+                <a href="#" class="cartOrderItemTitle fz-18 ls-005 text-uppercase">
+                  Футболка FOG Essentials
+                </a>
+              </div>
+              <div class="cartOrderItemContentBottom">
+
+                <div class="cartOrderItemVariations">
+                  <div class="cartOrderItemVariation fz-15 fw-light">
+                    Белый / L
+                  </div>
+                </div>
+
+                <div class="cartOrderItemPriceW">
+                  <span class="fz-15 fw-light">1 шт.</span>
+                  <div class="cartItemPrice">
+                    <span class="fz-15">8 900 ₽</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cartOrderRows">
+          <div class="cartOrderRow">
+            <span class="fw-light fz-15">Всего товаров</span>
+            <span class="fz-15">2 товара</span>
+          </div>
+          <div class="cartOrderRow">
+            <span class="fw-light fz-15">Сумма заказа</span>
+            <span class="fz-15">5 820 ₽</span>
+          </div>
+          <div class="cartOrderRow">
+            <span class="fw-light fz-15">Скидка</span>
+            <span class="fz-15">- 390 ₽</span>
+          </div>
+          <div class="cartOrderRow">
+            <span class="fw-light fz-15">МОЙ ПРОМОКОД</span>
+            <div class="d-flex align-items-center gap-15">
+              <span class="fz-15">- 1 000 ₽</span>
+              <a href="#">
+                <img src="@img/icons/close.svg" alt="icon">
+              </a>
+            </div>
+          </div>
+          <div class="cartOrderRow">
+            <span class="fz-18">Итоговая сумма</span>
+            <span class="fz-18">5 220 ₽</span>
+          </div>
+        </div>
+
+        <div class="agreement mb-30">
+          <input id="news_agree_1" type="checkbox">
+          <label for="news_agree_1">
+            <div class="rect"></div>
+            <div class="agreementText">
+              Я соглашаюсь с условиями <a class="hover-opacity" href="#">Политики конфиденциальности</a> и <a
+                class="hover-opacity" href="#">Политики обработки персональных данных</a>
+            </div>
+          </label>
+        </div>
+        <button class="checkout-btn button button--black w-100">
+          ОПЛАТИТЬ ЗАКАЗ
+        </button>
+
+      </div>
+    </div>
+  </div>
+</section>

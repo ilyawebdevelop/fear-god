@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html',{
+"title":"Оформление заказа"
+})
+
+<body class="woocommerce-checkout">
+
+	<div class="wrapper">
+		@@include('html/header-standart.html',{})
+		<main class="main">
+			@@include('html/checkout/head.html',{})
+			@@include('html/checkout/content.html',{})
+		</main>
+		@@include('html/footer-sm.html',{})
+		@@include('html/modal.html',{})
+	</div>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

@@ -169,3 +169,15 @@
     }
   }
 }
+.promoBtn {
+  background-color: #000;
+  width: 53px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .2s linear;
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: .8);
+  }
+}

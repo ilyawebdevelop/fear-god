@@ -224,3 +224,9 @@ if (mediaQueryMax991.matches) {
 		},
 	});
 }
+
+jQuery('.checkoutBlockTitle').click(function () {
+	jQuery(this).toggleClass('active');
+	jQuery(this).siblings('.checkoutGrid').slideToggle();
+	// jQuery(this).siblings('.bapf_body').toggleClass('hidden');
+});
