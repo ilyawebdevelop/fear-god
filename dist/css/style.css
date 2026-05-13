@@ -2517,6 +2517,10 @@ h3,
   margin-top: 30px;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
 .mt-45 {
   margin-top: 45px;
 }
@@ -2586,9 +2590,22 @@ h3,
   left: 0;
 }
 
+.fz-12 {
+  font-size: 12px;
+  line-height: normal;
+}
+
+.fz-14 {
+  font-size: 14px;
+  line-height: normal;
+}
+
 .fz-15 {
   font-size: 15px;
   line-height: normal;
+}
+.fz-15.lh-150 {
+  line-height: 150%;
 }
 
 .fz-18 {
@@ -2676,6 +2693,39 @@ h3,
 
 .image-cover {
   object-fit: cover;
+}
+
+.tableHead {
+  display: flex;
+  column-gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #E9E9E9;
+}
+.tableHead .col {
+  flex: 1;
+  text-align: center;
+}
+.tableHead .col:nth-child(1) {
+  max-width: 100px;
+  flex-shrink: 0;
+  flex: 100px;
+  text-align: start;
+}
+
+.tableRow {
+  display: flex;
+  column-gap: 10px;
+  padding-top: 10px;
+}
+.tableRow .col {
+  flex: 1;
+  text-align: center;
+}
+.tableRow .col:nth-child(1) {
+  max-width: 100px;
+  flex-shrink: 0;
+  flex: 100px;
+  text-align: start;
 }
 
 .button {
@@ -2901,6 +2951,9 @@ h3,
   font-size: 18px;
   line-height: normal;
 }
+.modal .h2.fz-20 {
+  font-size: 20px;
+}
 .modal .is-close-btn {
   position: unset;
   background-color: transparent;
@@ -2914,7 +2967,8 @@ h3,
 
 #modalFilter {
   width: 500px;
-  height: 100%;
+  min-height: calc(100vh - 10px);
+  overflow-y: auto;
   margin-left: auto;
 }
 
@@ -3024,6 +3078,21 @@ h3,
   width: 11px;
   height: 1px;
   background-color: #000;
+}
+
+#modalSize {
+  width: 700px;
+  min-height: calc(100vh - 10px);
+  overflow-y: auto;
+  margin-left: auto;
+}
+
+.modalSizeImg {
+  max-width: 225px;
+  max-height: 407px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }
 
 .tabs__nav {

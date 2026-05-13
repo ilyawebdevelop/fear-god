@@ -7,6 +7,10 @@
   .h2 {
     font-size: 18px;
     line-height: normal;
+
+    &.fz-20 {
+      font-size: 20px;
+    }
   }
 
   color: #000;
@@ -26,7 +30,8 @@
 
 #modalFilter {
   width: 500px;
-  height: 100%;
+  min-height: calc(100vh - 10px);
+  overflow-y: auto;
   margin-left: auto;
 }
 
@@ -140,6 +145,7 @@
 
 .bapf_to {
   position: relative;
+
   &::before {
     position: absolute;
     left: -20px;
@@ -151,4 +157,19 @@
     height: 1px;
     background-color: #000;
   }
+}
+
+#modalSize {
+  width: 700px;
+  min-height: calc(100vh - 10px);
+  overflow-y: auto;
+  margin-left: auto;
+}
+
+.modalSizeImg {
+  max-width: 225px;
+  max-height: 407px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
 }

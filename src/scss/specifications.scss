@@ -76,6 +76,7 @@ section {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
     &.select-sort {
       padding-left: 40px;
       background: url('@img/icons/sort.svg') no-repeat left 12px center / 15px;
@@ -302,6 +303,7 @@ h3,
 
 .content {
   line-height: 150%;
+
   &>p {
     margin-bottom: 15px;
 
@@ -393,6 +395,10 @@ h3,
   margin-top: 30px;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
 .mt-45 {
   margin-top: 45px;
 }
@@ -400,9 +406,11 @@ h3,
 .mb-10 {
   margin-bottom: 10px;
 }
+
 .mb-15 {
   margin-bottom: 15px;
 }
+
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -459,10 +467,21 @@ h3,
 .l-0 {
   left: 0;
 }
-
+.fz-12 {
+  font-size: 12px;
+  line-height: normal;
+}
+.fz-14 {
+  font-size: 14px;
+  line-height: normal;
+}
 .fz-15 {
   font-size: 15px;
   line-height: normal;
+
+  &.lh-150 {
+    line-height: 150%;
+  }
 }
 
 .fz-18 {
@@ -559,4 +578,39 @@ h3,
   object-fit: cover;
 }
 
-.searchW {}
+.tableHead {
+  display: flex;
+  column-gap: 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #E9E9E9;
+
+  .col {
+    flex: 1;
+    text-align: center;
+
+    &:nth-child(1) {
+      max-width: 100px;
+      flex-shrink: 0;
+      flex: 100px;
+      text-align: start;
+    }
+  }
+}
+
+.tableRow {
+  display: flex;
+  column-gap: 10px;
+  padding-top: 10px;
+
+  .col {
+    flex: 1;
+    text-align: center;
+
+    &:nth-child(1) {
+      max-width: 100px;
+      flex-shrink: 0;
+      flex: 100px;
+      text-align: start;
+    }
+  }
+}
