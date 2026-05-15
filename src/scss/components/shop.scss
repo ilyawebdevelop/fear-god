@@ -101,6 +101,17 @@
   }
 }
 
+.wishlistGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 28px;
+  row-gap: 60px;
+
+  .productCard {
+    grid-column: 3 span;
+  }
+}
+
 .shopList {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

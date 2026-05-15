@@ -54,6 +54,10 @@
     }
   }
 
+  &Title {
+    font-size: 18px;
+  }
+
   &Action {
     display: flex;
     align-items: flex-start;
@@ -179,14 +183,17 @@
   display: flex;
   column-gap: 20px;
 }
-.checkoutBlock{
+
+.checkoutBlock {
   padding-bottom: 50px;
 }
+
 .checkoutBlockTitle {
   display: flex;
   column-gap: 20px;
   justify-content: space-between;
   cursor: pointer;
+
   &.active {
     img {
       transform: rotate(180deg);
@@ -240,28 +247,10 @@
       grid-column: 12 span;
     }
   }
+
   .radioW {
     grid-column: 6 span;
-    input {
-      display: none;
-      &:checked {
-        &+label {
-          border-color: #000;
-        }
-      }
-    }
-    label {
-      border: 1px solid #e9e9e9;
-      height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      padding-left: 24px;
-      cursor: pointer;
-      transition: border-color .2s linear;
-      &:hover {
-        border-color: #000;
-      }
-    }
+
+
   }
 }

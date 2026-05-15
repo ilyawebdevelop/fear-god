@@ -11,7 +11,7 @@
 		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/style.min.css">
-	<title>Корзина</title>
+	<title>Контакты</title>
 </head>
 
 <body>
@@ -185,14 +185,14 @@
           </span>      
           <span class="aioseo-breadcrumb-separator"></span>
           <span class="aioseo-breadcrumb">
-            Корзина
+            Контакты
           </span>
         </div>
 
       </div>
 
       <h1 class="h1">
-        Корзина
+        Контакты
       </h1>
     </div>
 
@@ -200,148 +200,81 @@
 </section>
 			<section class="sect pt-0">
   <div class="container">
-    <div class="cartW">
-      <div class="cartContent">
-        <ul class="cartList">
 
-          <li class="cartItem">
+    <div class="contactsW">
+      <div class="col">
 
-            <a href="#" class="cartItemImg">
-              <img src="img/admin/product/image-1.jpg" alt="image">
-            </a>
-
-            <div class="cartItemContent">
-              <div class="cartItemContentTop">
-                <a href="#" class="cartItemTitle">Лонгслив Fear of God Essentials</a>
-                <a href="#" class="cartItemRemove">
-                  <img src="img/icons/close.svg" alt="icon">
-                </a>
-              </div>
-              <div class="cartItemContentBottom">
-
-                <div class="cartItemVariations">
-                  <div class="fw-light fz-15">
-                    Черный / M
-                  </div>
-                </div>
-
-                <div class="cartItemAction">
-
-                  <div class="cartItemQuantity">
-                    <button onclick="this.nextElementSibling.querySelector('input').stepDown();">-</button>
-                    <div class="quantity-input">
-                      <input type="number" value="3" min="1">
-                    </div>
-                    <button onclick="this.previousElementSibling.querySelector('input').stepUp();">+</button>
-                  </div>
-
-                  <div class="cartItemPrice">
-                    <span class="fz-15">12 990 ₽</span>
-                    <span class="fz-13 fw-light color-75 line-trough">14 900 ₽</span>
-                  </div>
-                </div>
-
-              </div>
+        <h2 class="h3 mb-30">Интернет-магазин</h2>
+        <div class="border-gray p-40 d-grid gap-40 grid-cols-2">
+          <div class="d-flex flex-column gap-10 mb-30">
+            <div class="fz-15 fw-light color-75">
+              Время работы поддержки
             </div>
-          </li>
-
-          <li class="cartItem">
-
-            <a href="#" class="cartItemImg">
-              <img src="img/admin/product/image-2.jpg" alt="image">
-            </a>
-
-            <div class="cartItemContent">
-              <div class="cartItemContentTop">
-                <a href="#" class="cartItemTitle">Футболка FOG Essentials</a>
-                <a href="#" class="cartItemRemove">
-                  <img src="img/icons/close.svg" alt="icon">
-                </a>
-              </div>
-              <div class="cartItemContentBottom">
-
-                <div class="cartItemVariations">
-                  <div class="fw-light fz-15">
-                    Белый / L
-                  </div>
-                </div>
-
-                <div class="cartItemAction">
-
-                  <div class="cartItemQuantity">
-                    <button onclick="this.nextElementSibling.querySelector('input').stepDown();">-</button>
-                    <div class="quantity-input">
-                      <input type="number" value="1" min="1">
-                    </div>
-                    <button onclick="this.previousElementSibling.querySelector('input').stepUp();">+</button>
-                  </div>
-
-                  <div class="cartItemPrice">
-                    <span class="fz-15">8 900 ₽</span>
-                  </div>
-                </div>
-
-              </div>
+            <div class="fz-18">ПН-ПТ с 10:00 до 20:00 по МСК</div>
+          </div>
+          <div class="d-flex flex-column gap-10 mb-30">
+            <div class="fz-15 fw-light color-75">
+              Телефон
             </div>
-          </li>
-
-        </ul>
-
-        <div class="promoW">
-          <input type="text" placeholder="Введите промокод">
-          <button class="promoBtn">
-            <img src="img/icons/btn-arrow-white.svg" alt="icon">
-          </button>
+            <a href="tel:+79938900099" class="fz-18 hover-opacity">+7 (993) 890-00-99</a>
+          </div>
+          <div class="d-flex flex-column gap-10 mb-30">
+            <div class="fz-15 fw-light color-75">
+              Почта
+            </div>
+            <a href="mailto:1977@gmail.com" class="fz-18 hover-opacity">1977@gmail.com</a>
+          </div>
+          <div class="d-flex flex-column gap-10 mb-30">
+            <div class="fz-15 fw-light color-75">
+              Телеграм-бот
+            </div>
+            <a href="#" class="fz-18 hover-opacity">@bot</a>
+          </div>
         </div>
 
       </div>
-      <div class="cartOrder">
-        <h3 class="h3 text-center mb-30">
-          Информация о заказе
-        </h3>
-
-        <div class="cartOrderRows">
-          <div class="cartOrderRow">
-            <span class="fw-light fz-15">Всего товаров</span>
-            <span class="fz-15">2 товара</span>
-          </div>
-          <div class="cartOrderRow">
-            <span class="fw-light fz-15">Сумма заказа</span>
-            <span class="fz-15">5 820 ₽</span>
-          </div>
-          <div class="cartOrderRow">
-            <span class="fw-light fz-15">Скидка</span>
-            <span class="fz-15">- 390 ₽</span>
-          </div>
-          <div class="cartOrderRow">
-            <span class="fw-light fz-15">МОЙ ПРОМОКОД</span>
-            <div class="d-flex align-items-center gap-15">
-              <span class="fz-15">- 1 000 ₽</span>
-              <a href="#">
-                <img src="img/icons/close.svg" alt="icon">
-              </a>
+      <div class="col">
+        <div class="h3 mb-30">Напишите нам</div>
+        <div class="border-black p-50">
+          <div class="d-grid gap-10 grid-cols-2 mb-20">
+            <div class="inputW">
+              <label class="color-75 mb-10 d-block fz-15 fw-light" for="name">Имя*</label>
+              <input id="name" name="name" type="text" class="formInput">
+            </div>
+            <div class="inputW">
+              <label class="color-75 mb-10 d-block fz-15 fw-light" for="tel">Телефон*</label>
+              <input id="tel" name="tel" type="tel" class="formInput" placeholder="+7 (___) ___-__-__">
             </div>
           </div>
-          <div class="cartOrderRow">
-            <span class="fz-18">Итоговая сумма</span>
-            <span class="fz-18">5 220 ₽</span>
+          <div class="inputW">
+            <label class="color-75 mb-10 d-block fz-15 fw-light" for="text">Сообщение</label>
+            <textarea name="text" id="text" class="formText h-110 w-100"></textarea>
           </div>
+
         </div>
-
-
-        <button class="button button--black w-100">
-          ПЕРЕЙТИ К ОФОРМЛЕНИЮ
-        </button>
-
       </div>
     </div>
+
   </div>
 </section>
+	
 		</main>
 		<!-- Footer -->
 <footer class="footer" id="footer">
   <div class="container">
-
+    <div class="footerT">
+      <div class="footerSubscribe">
+        <div class="footerSubscribeContent">
+          <div class="mb-10 h1">
+            Подпишитесь на наш Telegram
+          </div>
+          <div class="fz-15 fw-light">
+            Чтобы первым увидеть новые коллекции, новости и видео
+          </div>
+        </div>
+        <button class="button button--black min-w-255">ПОДПИСАТЬСЯ</button>
+      </div>
+    </div>
     <div class="footerC">
       <div class="footerContacts">
         <a href="#" class="logo mb-40 d-block">

@@ -1,0 +1,86 @@
+.certPageHead {
+  padding-bottom: 240px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($color: #000, $alpha: .8);
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.pageHeadCertImgW {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 380px;
+  margin-bottom: -433px;
+
+  &>img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+  }
+
+}
+
+.pageHeadCertImgContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.pageHeadCertLogo {
+  width: 156px;
+  margin-left: auto;
+}
+
+.pageHeadCertTitle {
+  font-weight: 300;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certSect {
+  padding-top: 240px;
+}
+.nominalGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  column-gap: 10px;
+  .radioW {
+    grid-column: 2 span;
+    label {
+      justify-content: center;
+    }
+  }
+}
+.certNomSum {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,165 @@
+.account {
+  &Nav {
+    margin-top: 45px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 5px;
+      flex-wrap: wrap;
+
+      li {
+        &.active {
+          a {
+            border-color: #000;
+          }
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 37px;
+          padding-left: 12px;
+          padding-right: 12px;
+          border: 1px solid transparent;
+          text-transform: uppercase;
+          font-size: 14px;
+          transition: border-color .2s linear;
+          position: relative;
+          column-gap: 10px;
+
+          &:hover {
+            border-color: #000;
+
+          }
+        }
+
+        &.account-nav-cart {
+          a {
+            &::after {
+              content: '';
+              width: 17px;
+              height: 16px;
+              display: block;
+              background: url('@img/icons/logout.svg') no-repeat center center / contain;
+              position: relative;
+              bottom: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.accountHistItem {
+  border-top: 1px solid #dfdfdf;
+
+  &:last-child {
+    border-bottom: 1px solid #dfdfdf;
+  }
+}
+
+.accountHistItemStatus {
+  padding: 6px 10px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  width: fit-content;
+
+  &--green {
+    background: rgba(66, 148, 68, 0.1);
+    color: #429444;
+  }
+
+  &--red {
+    background: rgba(208, 65, 65, 0.1);
+    color: #d04141;
+  }
+
+  &--gray {
+    background: rgba(117, 117, 117, 0.1);
+    color: #757575;
+  }
+}
+
+.accountHistItemHead {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+
+  &.active {
+    .accountHistItemArrow {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.accountHistItemR {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.accountHistItemArrow {
+  img {
+    width: 14px;
+    transition: transform .2s linear;
+  }
+}
+
+.accountHistItemBody {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 50px;
+  padding-bottom: 20px;
+}
+
+.accountHistItemCol {
+  grid-column: 6 span;
+}
+
+.accountHistItemProduct {
+  display: flex;
+  column-gap: 20px;
+  align-items: flex-start;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .cartItemImg {
+    img {
+      width: 100px;
+      height: 133px;
+    }
+  }
+}
+
+.accountHistItemOrder {
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+.accountHistItemOrderRow {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9e9e9;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

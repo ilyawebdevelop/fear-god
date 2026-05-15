@@ -1,0 +1,9 @@
+.contactsW {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 50px;
+  margin-top: 10px;
+  .col {
+    grid-column: 6 span;
+  }
+}

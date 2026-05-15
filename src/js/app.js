@@ -1,6 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import "./modules/jquery-3.7.1.min.js";
 import { Fancybox } from "./modules/fancybox.esm.js";
+import "./modules/inputmask.min.js";
 import './components.js';
 
 flsFunctions.isWebp();
@@ -8,6 +9,40 @@ flsFunctions.isWebp();
 Fancybox.bind("[data-fancybox]", {
 	closeButton: false,
 });
+
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask({
+  mask: '+7 (999) 999-99-99',
+  onBeforeWrite: function (event, buffer, caretPos, opts) {
+    // console.log(caretPos);
+    // Проверяем:
+    // 1. Позиция каретки (caretPos) равна 5 (вторая цифра в "99")
+    // 2. Нажата клавиша "8"
+    if (caretPos === 5 && event.key === '8') {
+      event.preventDefault(); // Запрещаем ввод     
+      // console.log("Ввод 8 в этой позиции запрещен!");
+      return {
+        refreshFromBuffer: true,
+        buffer: [],
+        caret: 4
+      };
+    }
+  },
+  onBeforePaste: function (pastedValue, opts) {
+    // Удаляем всё, кроме цифр
+    var processedValue = pastedValue.replace(/\D/g, "");
+
+    // Если первая цифра 7 или 8 и в строке 11 цифр, убираем первую
+    if (processedValue.length === 11 && (processedValue[0] === '7' || processedValue[0] === '8')) {
+      return processedValue.substring(1);
+    }
+
+    return pastedValue;
+  }
+
+});
+
+im.mask(inputs);
 
 // Import swiper
 import Swiper, { Navigation, Pagination, Autoplay, Mousewheel, EffectFade, Thumbs, Scrollbar } from 'swiper';
@@ -207,7 +242,7 @@ const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
 if (mediaQueryMax991.matches) {
 	// Инициализация слайдера introSlider
 	const productGalSlider = document.querySelector('.productGalSlider');
-	var mySwiperProductGal= new Swiper(productGalSlider, {
+	var mySwiperProductGal = new Swiper(productGalSlider, {
 		slidesPerView: 1,
 		speed: 1500,
 		spaceBetween: 10,
@@ -230,3 +265,14 @@ jQuery('.checkoutBlockTitle').click(function () {
 	jQuery(this).siblings('.checkoutGrid').slideToggle();
 	// jQuery(this).siblings('.bapf_body').toggleClass('hidden');
 });
+
+jQuery('.accountHistItemHead').click(function () {
+	jQuery(this).toggleClass('active');
+	jQuery(this).siblings('.accountHistItemBody').slideToggle();
+	jQuery(this).siblings('.accountHistItemBody').toggleClass('active');
+});
+
+// filter hide not first element 
+jQuery('.accountHistItem:first-child .accountHistItemHead').addClass('active');
+jQuery('.accountHistItem:first-child .accountHistItemBody').addClass('active');
+jQuery('.accountHistItem:first-child .accountHistItemBody').slideToggle();
