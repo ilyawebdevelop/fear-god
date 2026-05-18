@@ -2,6 +2,9 @@
   ul {
     display: flex;
     column-gap: 20px;
+    @media(max-width: 767px){
+      justify-content: center;
+    }
     li {
       a {
         &:hover {

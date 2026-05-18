@@ -10,6 +10,10 @@
       padding-bottom: 10px;
       border-bottom: 1px solid transparent;    
       color: #757575;
+      text-transform: uppercase;
+      @media(max-width: 991px){
+        font-size: 14px;
+      }
       &:hover {
         color: #000;
       }

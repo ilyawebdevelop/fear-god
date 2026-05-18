@@ -2,6 +2,12 @@
   display: flex;
   column-gap: 4px;
   align-items: center;
+
+  .navArrow {
+    @media(max-width: 991px) {
+      display: none;
+    }
+  }
 }
 
 .productSlider {
@@ -11,13 +17,29 @@
   padding-left: 10px;
   margin-left: -10px;
 
+  @media(max-width: 991px) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  @media(max-width: 575px) {
+    overflow: visible;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .swiper-pagination {
     display: none;
 
     @media(max-width: 991px) {
       display: flex;
+      justify-content: center;
+      position: relative;
+      bottom: unset;
+      margin-top: 15px;
     }
   }
+
 }
 
 .productCard {
@@ -43,6 +65,22 @@
       margin-bottom: 15px;
       height: 605px;
       position: relative;
+
+      @media(max-width: 1600px) {
+        height: 500px;
+      }
+
+      @media(max-width: 1400px) {
+        height: 400px;
+      }
+
+      @media(max-width: 991px) {
+        margin-bottom: 10px;
+      }
+
+      @media(max-width: 575px) {
+        height: 60vw;
+      }
     }
   }
 
@@ -52,6 +90,11 @@
     font-size: 18px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+
+    @media(max-width: 991px) {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
 
     &:hover {
       color: #757575;
@@ -65,12 +108,20 @@
     display: flex;
     gap: 15px;
 
+    @media(max-width: 991px) {
+      font-size: 14px;
+    }
+
     .price-old {
       font-weight: 300;
       font-size: 17px;
       text-decoration: line-through;
       color: #757575;
       opacity: .6;
+
+      @media(max-width: 991px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -79,11 +130,20 @@
     right: -7px;
     top: 13px;
 
+    @media(max-width: 991px) {
+      top: 7px;
+      right: -5px;
+    }
+
     ul {
       display: flex;
       align-items: flex-end;
       flex-direction: column;
       row-gap: 8px;
+
+      @media(max-width: 991px) {
+        row-gap: 5px;
+      }
 
       li {
         background-color: #000;
@@ -96,6 +156,11 @@
         text-transform: uppercase;
         width: fit-content;
         padding: 7px;
+
+        @media(max-width: 991px) {
+          font-size: 10px;
+          padding: 5px;
+        }
       }
     }
   }
@@ -107,8 +172,25 @@
   column-gap: 28px;
   row-gap: 60px;
 
+  @media(max-width: 1199px) {
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+
+  @media(max-width: 767px) {
+    column-gap: 10px;
+  }
+
   .productCard {
     grid-column: 3 span;
+
+    @media(max-width: 1199px) {
+      grid-column: 4 span;
+    }
+
+    @media(max-width: 767px) {
+      grid-column: 6 span;
+    }
   }
 }
 
@@ -118,8 +200,25 @@
   column-gap: 28px;
   row-gap: 60px;
 
+  @media(max-width: 1199px) {
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+  @media(max-width: 767px){
+    column-gap: 10px;
+    row-gap: 15px;
+  }
+
   .productCard {
     grid-column: 3 span;
+
+    @media(max-width: 1199px) {
+      grid-column: 4 span;
+    }
+
+    @media(max-width: 991px) {
+      grid-column: 6 span;
+    }
   }
 
   &--three {
@@ -129,6 +228,14 @@
       &Img {
         &W {
           height: 780px;
+
+          @media(max-width: 1600px) {
+            height: 600px;
+          }
+
+          @media(max-width: 1400px) {
+            height: 500px;
+          }
         }
       }
     }
@@ -147,14 +254,38 @@
   z-index: 1;
   position: sticky;
   top: 84px;
+
+  @media(max-width: 991px) {
+    flex-direction: column;
+    row-gap: 10px;
+    padding-bottom: 10px;
+    top: 58px;
+  }
 }
 
 .shopNav {
+  @media(max-width: 575px) {
+    width: calc(100% + 20px);
+    overflow-x: scroll;
+    margin-left: -10px;
+    padding-left: 10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
   ul {
     display: flex;
     column-gap: 5px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+
+    @media(max-width: 575px) {
+      flex-wrap: nowrap;
+    }
 
     li {
+ 
       &.active {
         a {
           border-color: #000;
@@ -173,6 +304,11 @@
         padding-right: 12px;
         border: 1px solid transparent;
         transition: border-color .2s linear;
+
+        @media(max-width: 767px) {
+          font-size: 12px;
+          height: 31px;
+        }
 
         &:hover {
           border-color: #000;

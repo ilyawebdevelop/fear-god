@@ -2,11 +2,16 @@
   &Nav {
     margin-top: 45px;
 
+    @media(max-width: 991px) {
+      margin-top: 30px;
+    }
+
     ul {
       display: flex;
       align-items: center;
       justify-content: center;
       column-gap: 5px;
+      row-gap: 5px;
       flex-wrap: wrap;
 
       li {
@@ -29,6 +34,11 @@
           transition: border-color .2s linear;
           position: relative;
           column-gap: 10px;
+          text-align: center;
+
+          @media(max-width: 575px) {
+            font-size: 12px;
+          }
 
           &:hover {
             border-color: #000;
@@ -95,6 +105,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
   cursor: pointer;
+  @media(max-width: 767px){
+    column-gap: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
   &.active {
     .accountHistItemArrow {
@@ -109,6 +124,9 @@
   display: flex;
   align-items: center;
   column-gap: 50px;
+  @media(max-width: 575px){
+    column-gap: 15px;
+  }
 }
 
 .accountHistItemArrow {
@@ -124,16 +142,28 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 50px;
   padding-bottom: 20px;
+
+  @media(max-width: 991px) {
+    row-gap: 20px;
+    column-gap: 0;
+  }
 }
 
 .accountHistItemCol {
   grid-column: 6 span;
+
+  @media(max-width: 991px) {
+    grid-column: 12 span;
+  }
 }
 
 .accountHistItemProduct {
   display: flex;
   column-gap: 20px;
   align-items: flex-start;
+  @media(max-width: 575px){
+    column-gap: 10px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -143,6 +173,10 @@
     img {
       width: 100px;
       height: 133px;
+      @media(max-width: 575px){
+        width: 80px;
+        height: 110px;
+      }
     }
   }
 }

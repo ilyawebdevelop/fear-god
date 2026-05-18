@@ -1,6 +1,11 @@
 .cartW {
   display: flex;
   column-gap: 50px;
+
+  @media(max-width: 1199px) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 }
 
 .cartContent {
@@ -13,12 +18,26 @@
   border: 1px solid #000;
   padding: 30px;
   height: fit-content;
+
+  @media(max-width: 1400px) {
+    width: 500px;
+  }
+
+  @media(max-width: 1199px) {
+    width: 100%;
+  }
+  @media(max-width: 991px){
+    padding: 20px 16px;
+  }
 }
 
 .cartItem {
   margin-bottom: 10px;
   display: flex;
   column-gap: 20px;
+  @media(max-width: 575px){
+    column-gap: 10px;
+  }
 
   &Content {
     width: 100%;
@@ -37,6 +56,11 @@
       justify-content: space-between;
       align-items: flex-start;
       column-gap: 20px;
+
+      @media(max-width: 575px) {
+        flex-direction: column;
+        row-gap: 10px;
+      }
     }
   }
 
@@ -51,11 +75,19 @@
       width: 150px;
       height: 200px;
       object-fit: cover;
+      @media(max-width: 575px){
+        width: 90px;
+        height: 120px;
+      }
     }
   }
 
   &Title {
     font-size: 18px;
+
+    @media(max-width: 575px) {
+      font-size: 16px;
+    }
   }
 
   &Action {
@@ -70,6 +102,11 @@
     flex-direction: column;
     row-gap: 5px;
     align-items: flex-end;
+
+    @media(max-width: 575px) {
+      flex-direction: row;
+      column-gap: 5px;
+    }
   }
 }
 
@@ -158,6 +195,11 @@
       width: 100px;
       height: 133px;
       object-fit: cover;
+
+      @media(max-width: 575px) {
+        width: 80px;
+        height: 110px;
+      }
     }
   }
 }
@@ -177,6 +219,12 @@
   align-items: flex-start;
   column-gap: 30px;
   justify-content: space-between;
+
+  @media(max-width: 575px) {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
 }
 
 .cartOrderItemPriceW {
@@ -186,6 +234,14 @@
 
 .checkoutBlock {
   padding-bottom: 50px;
+  &:last-child {
+    @media(max-width: 1199px){
+      padding-bottom: 0;
+    }
+  }
+  @media(max-width: 991px){
+    padding-bottom: 30px;
+  }
 }
 
 .checkoutBlockTitle {
@@ -207,8 +263,16 @@
   column-gap: 10px;
   row-gap: 20px;
 
+  @media(max-width: 767px) {
+    row-gap: 15px;
+  }
+
   .form-row {
     grid-column: 6 span;
+
+    @media(max-width: 767px) {
+      grid-column: 12 span;
+    }
 
     label {
       display: block;
@@ -224,6 +288,15 @@
       height: 54px;
       padding-left: 24px;
       padding-right: 20px;
+
+      @media(max-width: 1199px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      @media(max-width: 991px) {
+        height: 50px;
+      }
 
       &:focus {
         border-color: #000;
@@ -241,6 +314,14 @@
       -moz-appearance: none;
       appearance: none;
       background: url('@img/icons/arrow-down.svg') no-repeat right 20px center / 12px;
+
+      @media(max-width: 1199px) {
+        padding-left: 20px;
+      }
+
+      @media(max-width: 991px) {
+        height: 50px;
+      }
     }
 
     &--wide {
@@ -251,6 +332,9 @@
   .radioW {
     grid-column: 6 span;
 
+    @media(max-width: 767px) {
+      grid-column: 12 span;
+    }
 
   }
 }

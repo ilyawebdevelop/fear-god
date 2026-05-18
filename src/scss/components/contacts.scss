@@ -3,7 +3,17 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 50px;
   margin-top: 10px;
+  @media(max-width: 991px){
+    column-gap: 30px;
+  }
+  @media(max-width: 767px){
+    row-gap: 30px;
+    column-gap: 0;
+  }
   .col {
     grid-column: 6 span;
+    @media(max-width: 767px){
+      grid-column: 12 span;
+    }
   }
 }
