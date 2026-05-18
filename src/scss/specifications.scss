@@ -432,6 +432,11 @@ h3,
 .grid-cols-3 {
   grid-template-columns: repeat(3, 1fr);
 }
+.flex-md-column {
+  @media(max-width: 767px){
+    flex-direction: column;
+  }
+}
 
 .gap-10 {
   gap: 10px;

@@ -8,6 +8,10 @@
   z-index: 2;
   padding-top: 28px;
   padding-bottom: 28px;
+  @media(max-width: 991px){
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
   .container {
     position: relative;
@@ -18,17 +22,26 @@
     display: flex;
     align-items: center;
     column-gap: 30px;
+    @media(max-width: 1600px){
+      column-gap: 20px;
+    }
   }
 
   &Nav {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 0px;
     flex: 1 0 0;
+    @media(max-width: 1199px){
+      display: none;
+    }
 
     &>ul {
       display: flex;
       align-items: center;
       column-gap: 40px;
+      @media(max-width: 1600px){
+        column-gap: 20px;
+      }
 
       &>li {
         &>a {
@@ -39,6 +52,9 @@
           display: flex;
           border-bottom: 1px solid transparent;
           transition: border-color .2s linear;
+          @media(max-width: 1400px){
+            font-size: 13px;
+          }
 
           &.active {
             border-color: #000;
@@ -60,6 +76,9 @@
     svg {
       width: 80px;
       height: 24px;
+      @media(max-width: 575px){
+        width: 67px;
+      }
     }
   }
 
@@ -100,11 +119,15 @@
       z-index: 1;
       width: fit-content;
       margin-left: auto;
+      @media(max-width: 575px){
+        column-gap: 10px;
+      }
 
       li {
         &.active {
           a {
             position: relative;
+            display: flex;
 
             &::after {
               content: '';
@@ -340,5 +363,10 @@
     display: block;
     -webkit-animation: shows 0.2s;
     animation: shows 0.2s;
+  }
+}
+.headerActionSearchItem {
+  @media(max-width: 1199px){
+    display: none;
   }
 }

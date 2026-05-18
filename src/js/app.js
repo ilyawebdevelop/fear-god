@@ -276,3 +276,34 @@ jQuery('.accountHistItemHead').click(function () {
 jQuery('.accountHistItem:first-child .accountHistItemHead').addClass('active');
 jQuery('.accountHistItem:first-child .accountHistItemBody').addClass('active');
 jQuery('.accountHistItem:first-child .accountHistItemBody').slideToggle();
+
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerNav');
+const btnClose = document.getElementById('headerNavMobileClose');
+
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+}
+const menuClose = function () {
+  toggleBurger();
+  bodyOverflow();
+  toggleMenu();
+}
+
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+});
+
+btnClose?.addEventListener('click', function (e) {
+  menuClose();
+});
