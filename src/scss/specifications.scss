@@ -195,7 +195,7 @@ section {
   padding-bottom: 30px;
 
   @media(max-width: 1199px) {
-    padding-top: 100px;
+    padding-top: 75px;
   }
 
   &--pb-45 {
@@ -564,6 +564,11 @@ h3,
   &.gap-sm-20 {
     @media(max-width: 575px) {
       gap: 20px;
+    }
+  }
+  &.gap-sm-10 {
+    @media(max-width: 575px){
+      gap: 10px;
     }
   }
 }

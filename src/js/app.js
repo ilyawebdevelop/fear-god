@@ -55,6 +55,13 @@ $(window).on('load', function () {
 	});
 });
 
+$(window).on('load', function () {
+	$('.sub-menu-cat-video').each(function () {
+		var video = $(this);
+		video[0].play();
+	});
+});
+
 // Инициализация слайдера introSlider
 const introSlider = document.querySelector('.introSlider');
 var mySwiperIntro = new Swiper(introSlider, {
@@ -117,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const headerFixed = () => {
 		let scrollTop = window.scrollY;
-		let heroCenter = 100;
+		let heroCenter = 50;
 
 		if (scrollTop >= heroCenter) {
 			header.classList.add('active')

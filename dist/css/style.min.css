@@ -2327,7 +2327,7 @@ section {
 }
 @media (max-width: 1199px) {
   .pageHead {
-    padding-top: 100px;
+    padding-top: 75px;
   }
 }
 .pageHead--pb-45 {
@@ -2680,6 +2680,11 @@ h3,
 @media (max-width: 575px) {
   .gap-30.gap-sm-20 {
     gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .gap-30.gap-sm-10 {
+    gap: 10px;
   }
 }
 
@@ -3886,7 +3891,7 @@ h3,
   .headerNav .searchWContainer {
     display: flex;
     position: fixed;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     right: 0;
     padding-top: 10px;
@@ -4627,6 +4632,7 @@ h3,
     row-gap: 10px;
     padding-bottom: 10px;
     top: 58px;
+    padding-top: 0;
   }
 }
 
