@@ -9,6 +9,11 @@
   padding-top: 28px;
   padding-bottom: 28px;
 
+  @media(max-width: 1400px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   @media(max-width: 991px) {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -61,7 +66,7 @@
     &>ul {
       display: flex;
       align-items: center;
-      column-gap: 40px;
+      column-gap: 30px;
 
       @media(max-width: 1600px) {
         column-gap: 20px;
@@ -112,6 +117,7 @@
           display: flex;
           border-bottom: 1px solid transparent;
           transition: border-color .2s linear;
+          font-size: 14px;
 
           @media(max-width: 1400px) {
             font-size: 13px;
@@ -197,16 +203,18 @@
   }
 
   &Logo {
+    display: flex;
+
     &:hover {
       opacity: .8;
     }
 
     svg {
-      width: 80px;
+      width: 64px;
       height: 24px;
 
       @media(max-width: 575px) {
-        width: 67px;
+        width: 60px;
       }
     }
   }
@@ -243,7 +251,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      column-gap: 25px;
+      column-gap: 16px;
       position: relative;
       z-index: 1;
       width: fit-content;
@@ -277,8 +285,8 @@
         button {
 
           svg {
-            width: 24px;
-            height: 24px;
+            width: 18px;
+            height: 18px;
             fill: transparent;
             stroke: var(--main-color);
           }
@@ -427,6 +435,12 @@
     padding-bottom: 50px;
     display: none;
 
+    @media(max-width: 1400px) {
+      top: 64px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
     @media(max-width: 1199px) {
       top: 0;
       height: calc(100% - 29px);
@@ -468,6 +482,10 @@
           &:not(:last-child) {
             margin-bottom: 15px;
 
+            @media(max-width: 1400px) {
+              margin-bottom: 10px;
+            }
+
             @media(max-width: 1199px) {
               margin-bottom: 0;
             }
@@ -478,6 +496,10 @@
             border-bottom: 1px solid transparent;
             transition: border-color .2s linear;
             text-transform: uppercase;
+
+            @media(max-width: 1400px) {
+              font-size: 14px;
+            }
 
             @media(max-width: 1199px) {
               display: flex;
@@ -616,3 +638,10 @@
     display: flex;
   }
 }
+
+.sub-menu-cat-item-link {
+  @media(max-width: 1400px) {
+    font-size: 14px;
+  }
+}
+

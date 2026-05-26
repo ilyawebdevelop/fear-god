@@ -109,9 +109,14 @@ document.querySelectorAll('.productSlider').forEach(n => {
 			},
 			992: {
 				slidesPerView: 3,
+				spaceBetween: 10,
 			},
 			1200: {
 				slidesPerView: 4,
+				spaceBetween: 15,
+			},
+			1400: {
+				spaceBetween: 27,
 			},
 		},
 	});
@@ -140,6 +145,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.addEventListener('scroll', () => {
 		headerFixed();
 	});
+
+	const productContent = document.querySelector('.productContent');
+
+
+	const productCFixed = () => {
+		let scrollTop = window.scrollY;
+		let heroCenter = 50;
+
+		if (scrollTop >= heroCenter) {
+			productContent?.classList.add('active')
+			// mainEl.style.marginTop = `${header.offsetHeight}px`;
+		} else {
+			productContent?.classList.remove('active')
+			// mainEl.style.marginTop = `0px`;
+		}
+	};
+
+	productCFixed();
+
+	window.addEventListener('scroll', () => {
+		productCFixed();
+	});
+
 });
 
 let headerSearchBtn = document.querySelector('.headerSearchBtn');
@@ -167,7 +195,6 @@ headerSearchBtn.addEventListener('click', () => {
 	}
 });
 
-
 const toggleMenu = function () {
 	menu.classList.toggle('active');
 }
@@ -194,31 +221,37 @@ btnClose?.addEventListener('click', function (e) {
 	menuClose();
 });
 
+
+const mediaQueryMax575 = window.matchMedia('(max-width: 575px)');
+const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
+
 hasSubMenuArray.forEach(el => {
 	let link = el.querySelector('.menu-link');
 	let submenu = el.querySelector('.sub-menu');
 	let menuPrev = el.querySelector('.sub-menu-prev');
 	let submenuClose = el.querySelector('.sub-menu-close');
 
-	link.addEventListener('click', (e) => {
-		e.preventDefault();
+	if (mediaQueryMax991.matches) {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
 
-		if (!link.classList.contains('active')) {
-			hasSubMenuArray.forEach(elems => {
-				let linkElem = elems.querySelector('.menu-link');
-				let menuElem = elems.querySelector('.sub-menu');
-				bodyEl.classList.remove('hidden');
-				overlaySubmenu.classList.remove('active');
-				linkElem.classList.remove('active');
-				menuElem.classList.remove('active');
-			});
-		}
-		link.classList.toggle('active');
-		submenu.classList.toggle('active');
-		bodyEl.classList.toggle('hidden');
-		overlaySubmenu.classList.toggle('active');
+			if (!link.classList.contains('active')) {
+				hasSubMenuArray.forEach(elems => {
+					let linkElem = elems.querySelector('.menu-link');
+					let menuElem = elems.querySelector('.sub-menu');
+					bodyEl.classList.remove('hidden');
+					overlaySubmenu.classList.remove('active');
+					linkElem.classList.remove('active');
+					menuElem.classList.remove('active');
+				});
+			}
+			link.classList.toggle('active');
+			submenu.classList.toggle('active');
+			bodyEl.classList.toggle('hidden');
+			overlaySubmenu.classList.toggle('active');
 
-	});
+		});
+	}
 
 	menuPrev.addEventListener('click', () => {
 		link.classList.remove('active');
@@ -234,8 +267,6 @@ hasSubMenuArray.forEach(el => {
 	});
 
 });
-
-
 
 overlaySubmenu.addEventListener('click', () => {
 	hasSubMenuArray.forEach(el => {
@@ -280,7 +311,6 @@ if (localStorage.keyTypeShopPage == 1) {
 	enableShopRow();
 }
 
-
 jQuery('.bapf_head').click(function () {
 	jQuery(this).toggleClass('hidden');
 	jQuery(this).siblings('.bapf_body').slideToggle();
@@ -291,7 +321,7 @@ jQuery('.bapf_head').click(function () {
 jQuery('#modalFilter .berocket_single_filter_widget_200 .bapf_head').addClass('hidden');
 jQuery('#modalFilter .berocket_single_filter_widget_200 .bapf_body').addClass('hidden');
 
-const mediaQueryMax991 = window.matchMedia('(max-width: 991px)');
+
 
 if (mediaQueryMax991.matches) {
 	// Инициализация слайдера introSlider
@@ -331,8 +361,56 @@ jQuery('.accountHistItem:first-child .accountHistItemHead').addClass('active');
 jQuery('.accountHistItem:first-child .accountHistItemBody').addClass('active');
 jQuery('.accountHistItem:first-child .accountHistItemBody').slideToggle();
 
-// footer nav toggle
-jQuery('.footerNavHead').click(function () {
-	jQuery(this).toggleClass('active');
-	jQuery(this).siblings('ul').slideToggle();
-});
+if (mediaQueryMax575.matches) {
+	// footer nav toggle
+	jQuery('.footerNavHead').click(function () {
+		jQuery(this).toggleClass('active');
+		jQuery(this).siblings('ul').slideToggle();
+	});
+}
+
+const mediaQueryMin992 = window.matchMedia('(min-width: 992px)');
+
+if (mediaQueryMin992.matches) {
+	let subMenuTimer; // Таймер для скрытия подменю
+
+	$('.menu-link').on('mouseenter', function () {
+		// Очищаем таймер, если он был установлен (например, при быстром наведении с одного пункта на другой)
+		clearTimeout(subMenuTimer);
+
+		const $link = $(this);
+		const $subMenu = $link.next('.sub-menu'); // Находим подменю, которое идет сразу после .menu-link
+
+		// Проверяем, есть ли у этого .menu-link подменю
+		if ($subMenu.length) {
+			// Убираем класс 'is-visible' у ВСЕХ подменю, чтобы обновить состояние
+			// перед тем, как показать нужное. Это важно, если у вас несколько пунктов с подменю.
+			$('.sub-menu').removeClass('active');
+			// Затем добавляем класс нужному подменю
+			$subMenu.addClass('active');
+		}
+	});
+
+	$('.menu-link').on('mouseleave', function () {
+		// При уходе с .menu-link, запускаем таймер для скрытия подменю
+		subMenuTimer = setTimeout(function () {
+			// Ищем ВСЕ подменю и скрываем их
+			// (вдруг пользователь ушел с пункта, но еще не зашел на подменю)
+			$('.sub-menu').removeClass('active');
+		}, 1000); // 1000 миллисекунд = 1 секунда
+	});
+
+	// Важно: При наведении МЫШЬЮ на само подменю, таймер должен сбрасываться,
+	// чтобы подменю не исчезло, пока пользователь им пользуется.
+	$('.sub-menu').on('mouseenter', function () {
+		clearTimeout(subMenuTimer); // Сбрасываем таймер
+	});
+
+	// При уходе с подменю, снова запускаем таймер для его скрытия.
+	// Это нужно, если пользователь "ушел" с подменю (например, нажал на ссылку внутри него).
+	$('.sub-menu').on('mouseleave', function () {
+		subMenuTimer = setTimeout(function () {
+			$(this).removeClass('active'); // Скрываем подменю, с которого ушли
+		}.bind(this), 500); // Привязываем 'this' к самому .sub-menu
+	});
+}

@@ -88,7 +88,19 @@
     flex-shrink: 0;
     position: sticky;
     top: 85px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 184px);
     height: fit-content;
+    // padding-right: 10px;
+    scrollbar-width: none;
+
+    @media(max-width: 991px) {
+      max-height: unset;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     @media(max-width: 1400px) {
       width: 500px;
@@ -97,14 +109,16 @@
     @media(max-width: 1199px) {
       width: 400px;
     }
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
       width: 100%;
     }
 
     .productCardTags {
       position: unset;
       margin-bottom: 20px;
-      @media(max-width: 575px){
+
+      @media(max-width: 575px) {
         margin-bottom: 10px;
       }
 
@@ -119,13 +133,26 @@
       width: 100%;
       justify-content: space-between;
     }
+
+    &.active {
+      max-height: calc(100vh - 84px);
+
+      @media(max-width: 991px) {
+        max-height: unset;
+      }
+    }
   }
 
   &Title {
     font-size: 28px;
     line-height: normal;
     margin-bottom: 20px;
-    @media(max-width: 575px){
+
+    @media(max-width: 1400px) {
+      font-size: 24px;
+    }
+
+    @media(max-width: 575px) {
       font-size: 20px;
       margin-bottom: 10px;
     }
@@ -138,7 +165,13 @@
     font-size: 20px;
     line-height: normal;
     margin-bottom: 40px;
-    @media(max-width: 991px){
+
+    @media(max-width: 1400px) {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    @media(max-width: 991px) {
       margin-bottom: 20px;
       font-size: 16px;
     }
@@ -148,7 +181,8 @@
       font-weight: 300;
       font-size: 15px;
       text-decoration: line-through;
-      @media(max-width: 991px){
+
+      @media(max-width: 991px) {
         font-size: 13px;
       }
     }
@@ -159,6 +193,9 @@
   }
 
   &Variation {
+    // margin-left: 5px;
+    padding-left: 5px;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -174,7 +211,8 @@
       column-gap: 10px;
       row-gap: 10px;
       flex-wrap: wrap;
-      @media(max-width: 575px){
+
+      @media(max-width: 575px) {
         row-gap: 5px;
         column-gap: 5px;
       }
@@ -193,7 +231,7 @@
 
     &--color {
       ul {
-
+        margin-left: 5px;
 
         li {
           input {
@@ -214,6 +252,11 @@
             align-items: center;
             justify-content: center;
 
+            @media(max-width: 1400px) {
+              width: 32px;
+              height: 32px;
+            }
+
             &:before {
               content: '';
               position: absolute;
@@ -223,6 +266,11 @@
               height: 46px;
               border: 1px solid transparent;
               transition: border-color .2s linear;
+
+              @media(max-width: 1400px) {
+                width: 37px;
+                height: 37px;
+              }
             }
 
             &:hover {
@@ -257,7 +305,15 @@
             align-items: center;
             justify-content: center;
             transition: border-color .2s linear;
-            @media(max-width: 575px){
+
+            @media(max-width: 1400px) {
+              height: 32px;
+              padding-left: 10px;
+              padding-right: 10px;
+              font-size: 13px;
+            }
+
+            @media(max-width: 575px) {
               height: 36px;
               font-size: 14px;
             }
@@ -273,7 +329,8 @@
 
   &Tabs {
     margin-top: 40px;
-    @media(max-width: 991px){
+
+    @media(max-width: 991px) {
       margin-top: 20px;
     }
   }
@@ -286,7 +343,12 @@
   flex-wrap: wrap;
   row-gap: 10px;
   column-gap: 10px;
-  @media(max-width: 991px){
+
+  @media(max-width: 1400px) {
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: 991px) {
     margin-bottom: 20px;
   }
 

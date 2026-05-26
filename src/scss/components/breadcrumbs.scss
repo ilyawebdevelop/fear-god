@@ -11,6 +11,9 @@
   flex-wrap: wrap;
   align-items: center;
   font-weight: 300;
+  @media(max-width: 1400px){
+    font-size: 13px;
+  }
 }
 
 .aioseo-breadcrumbs a {

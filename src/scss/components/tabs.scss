@@ -11,6 +11,9 @@
       border-bottom: 1px solid transparent;    
       color: #757575;
       text-transform: uppercase;
+      @media(max-width: 1400px){
+        font-size: 13px;
+      }
       @media(max-width: 991px){
         font-size: 14px;
       }

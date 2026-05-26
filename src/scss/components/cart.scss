@@ -26,7 +26,8 @@
   @media(max-width: 1199px) {
     width: 100%;
   }
-  @media(max-width: 991px){
+
+  @media(max-width: 991px) {
     padding: 20px 16px;
   }
 }
@@ -35,7 +36,8 @@
   margin-bottom: 10px;
   display: flex;
   column-gap: 20px;
-  @media(max-width: 575px){
+
+  @media(max-width: 575px) {
     column-gap: 10px;
   }
 
@@ -75,7 +77,13 @@
       width: 150px;
       height: 200px;
       object-fit: cover;
-      @media(max-width: 575px){
+
+      @media(max-width: 1400px) {
+        width: 120px;
+        height: 150px;
+      }
+
+      @media(max-width: 575px) {
         width: 90px;
         height: 120px;
       }
@@ -84,6 +92,10 @@
 
   &Title {
     font-size: 18px;
+
+    @media(max-width: 1400px) {
+      font-size: 16px;
+    }
 
     @media(max-width: 575px) {
       font-size: 16px;
@@ -158,11 +170,23 @@
     padding-right: 20px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+
+    @media(max-width: 1400px) {
+      font-size: 13px;
+    }
+
+    @media(max-width: 991px) {
+      font-size: 16px;
+    }
   }
 }
 
 .cartOrderRows {
   margin-bottom: 30px;
+
+  @media(max-width: 1400px) {
+    margin-bottom: 20px;
+  }
 }
 
 .cartOrderRow {
@@ -234,12 +258,18 @@
 
 .checkoutBlock {
   padding-bottom: 50px;
+
   &:last-child {
-    @media(max-width: 1199px){
+    @media(max-width: 1199px) {
       padding-bottom: 0;
     }
   }
-  @media(max-width: 991px){
+
+  @media(max-width: 1400px) {
+    padding-bottom: 40px;
+  }
+
+  @media(max-width: 991px) {
     padding-bottom: 30px;
   }
 }
@@ -253,6 +283,12 @@
   &.active {
     img {
       transform: rotate(180deg);
+    }
+  }
+
+  img {
+    @media(max-width: 1400px) {
+      width: 14px;
     }
   }
 }
@@ -280,6 +316,10 @@
       font-weight: 300;
       font-size: 15px;
       color: #757575;
+
+      @media(max-width: 1400px) {
+        font-size: 13px;
+      }
     }
 
     input {
@@ -289,7 +329,8 @@
       padding-left: 24px;
       padding-right: 20px;
 
-      @media(max-width: 1199px) {
+      @media(max-width: 1400px) {
+        height: 48px;
         padding-left: 20px;
         padding-right: 20px;
       }
@@ -314,6 +355,11 @@
       -moz-appearance: none;
       appearance: none;
       background: url('@img/icons/arrow-down.svg') no-repeat right 20px center / 12px;
+
+      @media(max-width: 1400px) {
+        height: 48px;
+        padding-left: 20px;
+      }
 
       @media(max-width: 1199px) {
         padding-left: 20px;
